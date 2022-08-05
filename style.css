@@ -1,0 +1,119 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    padding: 0;
+    text-align: right;
+    background-color: black;
+    font-family: serif;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contenu {
+    display: grid;
+    /* gap: 10px; */
+    grid-template-areas:
+        "textarea"
+        "boutons";
+    justify-content: center;
+}
+
+.input {
+    grid-area: textarea;
+}
+
+#entry {
+    background: black;
+    color: #fff;
+    border: 1px solid #fff;
+    resize: none;
+    text-align: right;
+    text-justify: inter-cluster;
+    border-radius: 15px;
+    border-bottom: none;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.buttons {
+    padding: 10px;
+    grid-area: boutons;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1Fr);
+    grid-template-rows: repeat(5, 1Fr);
+    grid-template-areas:
+        "clear plus-ou-moins modulo division"
+        "clear plus-ou-moins modulo division"
+        "sept huit neuf multiplication"
+        "quatre cinq six soustraction"
+        "un deux trois addition"
+        "virgule zeros egal egal";
+    border: 1px solid #686251;
+    border-radius: 15px;
+}
+
+input {
+    height: 55px;
+    border: 0px;
+    font-size: 22px;
+    /* font-weight: bold; */
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chiffres {
+    background-color: #686251;
+}
+
+.chiffres:hover {
+    border: 1px solid #686251;
+    background-color: black;
+    font-weight: normal;
+}
+
+.signes,
+.signess,
+.delete {
+    background-color: orange;
+}
+
+.signes:hover,
+.signess:hover,
+.delete:hover {
+    background-color: black;
+    border: 1px solid orange;
+
+}
+
+.commandes {
+    color: black;
+}
+
+#clear {
+    background-color: green;
+}
+
+#clear:hover {
+    color: white;
+    background-color: red;
+}
+
+.commandes:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+
+#egal {
+    border-radius: 60px;
+    grid-area: egal;
+}
